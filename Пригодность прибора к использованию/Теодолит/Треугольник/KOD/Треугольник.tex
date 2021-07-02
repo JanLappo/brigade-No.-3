@@ -1,0 +1,78 @@
+\documentclass[a4paper]{article}
+\usepackage[14pt]{extsizes}
+\usepackage{setspace,amsmath}
+\usepackage{savesym}
+\savesymbol{iint}
+\usepackage{txfonts}
+\restoresymbol{TXF}{iint}
+\usepackage[left=20mm, top=20mm, right=20mm, bottom=20mm]{geometry}
+\setlength{\parindent}{12,5mm}
+\linespread{1.15}
+\usepackage[russian]{babel}
+\usepackage[T2A]{fontenc} % кодировка
+\usepackage{fontspec} 
+\usepackage{multirow}
+\defaultfontfeatures{Ligatures={TeX}, Renderer=Basic} 
+\setmainfont[Ligatures={TeX,Historic}]{Times New Roman}
+
+\def\ang#1#2#3{$#1^\circ\,#2'\,#3''$} 
+
+\usepackage{graphicx}
+\usepackage{lscape}
+\graphicspath{{pictures}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\begin{document}
+\begin{center}
+    \large{\textbf{Треугольник}}
+\end{center}
+\large{
+\par Для проверки невзки в полигоне были выполнены измерения углов в треугольном полигоне. Для этого был построен равносторонний треугольник со сторонами 60 метров. Результаты измерений представленный в таблице ниже.\\
+Таблица 1 -- Журнал измерения углов\\
+\vspace{2mm}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Номер  & Положение  & \multirow{2}{*}{Отсчёт} & \multirow{2}{*}{Угол} & Средний \\
+станции &  круга &  &  &  угол\\
+\hline
+\multirow{4}{*}{1} & \multirow{2}{*}{КЛ}  & \ang{0}{01}{26} & \multirow{2}{*}{\ang{66}{00}{06}} & \multirow{4}{*}{\ang{66}{00}{09}}\\
+\cline{3-3}
+ & & \ang{66}{01}{32} &  &  \\ 
+\cline{2-4}
+ & \multirow{2}{*}{КП} & \ang{180}{01}{32} & \multirow{2}{*}{\ang{66}{00}{11}} &  \\
+\cline{3-3} 
+ &  & \ang{246}{01}{43} &  &  \\
+\hline
+
+\multirow{4}{*}{2} & \multirow{2}{*}{КЛ}  & \ang{99}{43}{16} & \multirow{2}{*}{\ang{60}{13}{38}} & \multirow{4}{*}{\ang{60}{13}{43}}\\
+\cline{3-3}
+ & & \ang{159}{56}{54} &  &  \\
+\cline{2-4}
+ & \multirow{2}{*}{КП} & \ang{299}{43}{11} & \multirow{2}{*}{\ang{60}{13}{47}} &  \\
+\cline{3-3}
+ &  & \ang{359}{56}{58} &  &  \\
+\hline
+
+\multirow{4}{*}{3} & \multirow{2}{*}{КЛ}  & \ang{146}{40}{59} & \multirow{2}{*}{\ang{53}{46}{09}} & \multirow{4}{*}{\ang{53}{46}{03}}\\
+\cline{3-3}
+ & & \ang{200}{27}{08} &  &  \\
+\cline{2-4}
+ & \multirow{2}{*}{КП} & \ang{326}{41}{11} & \multirow{2}{*}{\ang{53}{45}{56}} &  \\
+\cline{3-3}
+ &  & \ang{20}{27}{07} &  &  \\
+\hline
+\end{tabular}
+\vspace{2mm}
+\par Невязка в треугольнике:
+\begin{center}
+$f_\beta = \sum\beta_n - \sum\beta_T$\\
+$f_\beta = \ang{66}{00}{09} + \ang{60}{13}{43} + \ang{53}{46}{03} - 180^\circ = 5 ^{\prime\prime}$
+\end{center}
+\par Допустимая невязка в треугольнике:
+\begin{center}
+$f_{\beta{dop}} = 2\cdot t \cdot\sqrt{n}$\\
+$f_{\beta{dop}} = 2\cdot 2^{\prime\prime} \cdot \sqrt{3} = 6,9^{\prime\prime} $
+\end{center}
+\par \textbf{Вывод:} фактическая невязка не превышает допустимую.
+}
+
+\end{document}
